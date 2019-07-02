@@ -1,0 +1,280 @@
+body {
+    justify-content: center;
+    margin: auto;
+    background-color: #0b192f;
+    width: 750px;
+}
+
+.post-1 {
+	background: #B71757;
+}
+.post-2 {
+	background: #0D7E71;
+}
+.post-3 {
+	background: #b1660e;
+}
+.post-4 {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+.header {
+    background-color: #162B4D;
+}
+.footer {
+    background-color: #162B4D;
+}
+
+.post, .header {
+    color: white;
+}
+
+.logo_pink_text {
+    color: #B71757;
+}
+
+.post_heading {
+    font-weight: lighter;
+    font-size: 2em;
+}
+
+.post_content, .news_content {
+    font-size: 0.7em;
+}
+
+.post_description {
+    display: flex;
+    justify-content: center;
+}
+
+.news {
+    background-color: white;
+}
+
+.post_bottom {
+    background-color: #2d95bb;
+}
+
+.news_space {
+    height: max-content;
+}
+
+.post_preview, .news_preview{
+    height: 100%;
+    width: 100%;
+}
+
+.header,
+.main,
+.footer,
+.post,
+.post_description,
+.post_date,
+.header_nav,
+.header_nav_item{
+    display: flex;
+}
+
+.header {
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    margin-bottom: 10px;
+}
+
+.header_nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    font-size: 0.9em;
+}
+
+.main {
+    flex-direction: row;
+    flex: 10;
+}
+
+.post_description:hover, .post_img_container:hover {
+    cursor: pointer;
+    filter: opacity(60%);
+}
+.header_nav_item {
+    flex: 1;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.header_nav_item:hover{
+    background-color: #283D5F;
+}
+
+.post:nth-child(even),
+.post:nth-child(even) .post_description {
+    flex-direction: row-reverse;
+}
+
+.post:nth-child(even) .post_content,
+.post:nth-child(even) .post_heading{
+   text-align: right;
+}
+
+.footer {
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    font-size: 0.7em;
+    padding: 20px;
+    color: #49596B;
+    margin-top: 10px;
+}
+
+.post {
+    flex-direction: row;
+}
+.post_space {
+    padding-right: 10px;
+}
+
+.post_img_container,
+.post_description,
+.news_img_container{
+    flex: 1;
+}
+
+.post_space {
+    flex: 5;
+}
+
+.news_space {
+    flex: 2;
+}
+
+.post_heading,
+.post_content,
+.news_content,
+.news_heading {
+    padding: 10px;
+    margin: 0;
+}
+.news_heading{
+    margin: 0;
+}
+
+.news_content{
+    margin-top: 0;
+}
+
+.day{
+    font-size: 2em;
+    padding: 5px;
+    margin: 0;
+}
+.month{
+    padding: 5px;
+    margin: 0;
+}
+.post_date{
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+@media (max-width: 768px) {
+
+    body{
+        margin: auto;
+        width: 463px;
+    }
+
+    .header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header_nav{
+        display: none;
+    }
+
+    .header:before{
+        content: "\2630";
+        margin: 20px;
+    }
+
+    .post {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .post:nth-child(even),
+    .post:nth-child(even) .post_description{
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .post:nth-child(even) .post_content,
+    .post:nth-child(even) .post_heading,
+    .post_content,
+    .post_heading {
+        text-align: left;
+    }
+
+    .post_space {
+        flex: 4;
+    }
+
+    .news_space {
+        flex: 3
+    }
+
+    .post_img_container {
+        flex: 2;
+    }
+
+    .post_description {
+        flex-direction: column;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer p{
+        text-align: center;
+        margin: 5px;
+    }
+
+}
+@media (max-width: 480px) {
+
+    body {
+        width: 100%;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .post_description {
+        min-height: 100vw;
+    }
+    .post_space{
+        padding-right: 0;
+    }
+
+    .post_heading, .day{
+        font-size: 10vw;
+    }
+    .post_content, .month{
+        font-size: 4vw;
+    }
+}
