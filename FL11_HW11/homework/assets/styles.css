@@ -1,0 +1,58 @@
+#add_new_item {
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+#add_item_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#action_text{
+    display: flex;
+    flex: 1;
+    max-width: 400px;
+}
+
+h1{
+    text-align: center;
+}
+
+.list_item{
+    list-style-type: none;
+    border: black 1px;
+    margin: 5px;
+    display: flex;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"] + label{
+    display: flex;
+    flex-direction: row;
+
+}
+
+input[type="checkbox"] + label .material-icons:first-child{
+    display: block;
+}
+input[type="checkbox"] + label .material-icons:nth-child(2){
+    display: none;
+}
+input[type="checkbox"]:checked + label .material-icons:first-child{
+    display: none;
+}
+input[type="checkbox"]:checked + label .material-icons:nth-child(2){
+    display: block;
+}
+
+input[type="checkbox"] + label p{
+    margin: 0;
+    color: #2aabd2;
+}
